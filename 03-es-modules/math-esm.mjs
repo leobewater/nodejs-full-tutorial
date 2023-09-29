@@ -1,5 +1,12 @@
-const add = (a, b) => {
+export const add = (a, b) => {
   return a + b;
 };
 
-export default add;
+export const subtract = (a, b) => {
+  return a - b;
+};
+
+// export default {
+//   add,
+//   subtract,
+// };
