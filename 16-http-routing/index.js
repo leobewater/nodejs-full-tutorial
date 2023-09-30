@@ -3,6 +3,7 @@ const fs = require('node:fs');
 
 const server = http.createServer((req, res) => {
   // res.end(req.url);
+  // res.method GET POST PUT DELETE
   if (req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Home page');
