@@ -8,7 +8,7 @@ emitter.on('order-pizza', (size, topping) => {
 });
 emitter.on('order-pizza', (size) => {
   if (size === 'large') {
-    console.log(`Serving compleimentary drink`);
+    console.log(`Serving complimentary drink`);
   }
 });
 
