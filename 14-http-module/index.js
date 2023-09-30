@@ -15,9 +15,14 @@ const server = http.createServer((req, res) => {
   //   res.writeHead(200, { 'Content-Type': 'text/html' });
   //   res.end('<h1>Hello World</h1>');
 
-  const html = fs.readFileSync('./index.html', 'utf-8');
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(html);
+
+  // this save the entire html file into memory
+  // const html = fs.readFileSync('./index.html', 'utf-8');
+  // res.end(html);
+
+  // use stream instead more performance
+  fs.createReadStream(__dirname + '/index.html').pipe(res);
 });
 
 server.listen(3000, () => {
